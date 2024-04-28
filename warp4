@@ -47,16 +47,16 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "188.114.97.6",
-        "188.114.96.6",
         "2a06:98c1:3120::6",
         "2a06:98c1:3121::6",
-        "104.18.202.232",
+        "188.114.97.6",
+        "188.114.96.6",
         "104.18.203.232",
-        "188.114.96.3",
-        "188.114.97.3",
-        "2a06:98c1:3121::3",
-        "2a06:98c1:3120::3"
+        "104.18.202.232",
+        "2a06:98c1:3120::6",
+        "2a06:98c1:3121::6",
+        "188.114.97.6",
+        "188.114.96.6"
       ]
     },
     "independent_cache": true
@@ -97,12 +97,12 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "WARP1 § 0",
-        "WARP2 § 1",
-        "WARP3 § 2",
-        "WARP4 § 3",
-        "WARP5 § 4",
-        "WARP6 § 5"
+        "WARP § 0",
+        "WARP § 1",
+        "WARP § 2",
+        "WARP § 3",
+        "WARP § 4",
+        "WARP § 5"
       ],
       "default": "auto"
     },
@@ -110,12 +110,12 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "WARP1 § 0",
-        "WARP2 § 1",
-        "WARP3 § 2",
-        "WARP4 § 3",
-        "WARP5 § 4",
-        "WARP6 § 5"
+        "WARP § 0",
+        "WARP § 1",
+        "WARP § 2",
+        "WARP § 3",
+        "WARP § 4",
+        "WARP § 5"
       ],
       "url": "http://cp.cloudflare.com/",
       "interval": "10m0s",
@@ -291,7 +291,7 @@
     },
     "clash_api": {
       "external_controller": "127.0.0.1:6756",
-      "secret": "uGPnxyFA6Y3YgrIF"
+      "secret": "XYU9okVt5vBL3WN5"
     }
   }
 }
