@@ -1,2 +1,2 @@
 warp://188.114.97.170:894?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#irancell&&detour=warp://188.114.97.170:894#w_w_irancell
-warp://[2606:4700:d1::41c0:849e:4491:2ef]:908?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#Mci&&detour=warp://[2606:4700:d1::41c0:849e:4491:2ef]:908#w_w_Mci
+warp://2606:4700:d1::41c0:849e:4491:2ef:908?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#Mci&&detour=warp://2606:4700:d1::41c0:849e:4491:2ef:908#w_w_Mci
