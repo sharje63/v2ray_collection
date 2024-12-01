@@ -446,7 +446,7 @@
       "settings": {
         "servers": [
           {
-            "address": "82.149.79.3",
+            "address": "[::ffff:d461:4603]",
             "ota": false,
             "port": 89,
             "level": 1,
@@ -580,7 +580,7 @@
           {
             "address": "146.70.238.163",
             "ota": false,
-            "port": 89,
+            "port": 90,
             "level": 1,
             "users": [
               {
@@ -712,7 +712,7 @@
           {
             "address": "185.81.125.67",
             "ota": false,
-            "port": 89,
+            "port": 90,
             "level": 1,
             "users": [
               {
