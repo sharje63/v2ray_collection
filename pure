@@ -50,7 +50,7 @@
       "settings": {
         "servers": [
           {
-            "address": "149.34.252.5",
+            "address": "91.214.64.21",
             "ota": false,
             "port": 90,
             "level": 1,
