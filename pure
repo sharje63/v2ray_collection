@@ -1,530 +1,316 @@
-[
 {
-"remarks": "pure-🇩🇪",
   "dns": {
-    "hosts": {
-      "geosite:category-ads-all": "127.0.0.1",
-      "geosite:category-ads-ir": "127.0.0.1",
-      "domain:googleapis.cn": "googleapis.com"
-    },
     "servers": [
-      "https://8.8.8.8/dns-query"
-    ]
+      {
+        "type": "udp",
+        "server": "8.8.8.8"
+      },
+      {
+        "type": "udp",
+        "server": "78.157.42.100"
+      },
+      {
+        "type": "udp",
+        "server": "46.155.200.30"
+      },
+      {
+        "type": "udp",
+        "server": "2620:119:35::5437"
+      },
+      {
+        "type": "udp",
+        "server": "2620:119:35::e22"
+      },
+      {
+        "type": "udp",
+        "server": "2620:119:35::4ed7"
+      },
+      {
+        "type": "udp",
+        "server": "2620:119:35::f85"
+      },
+      {
+        "type": "udp",
+        "server": "2620:119:35::68a"
+      },
+      {
+        "type": "local"
+      }
+    ],
+    "strategy": "prefer_ipv4"
   },
   "inbounds": [
     {
-      "listen": "127.0.0.1",
-      "port": 10808,
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
+      "type": "tun",
+      "mtu": 1480,
+      "address": "172.19.0.1/30",
+      "auto_route": true,
+      "stack": "system",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 2080
+        }
       },
-      "sniffing": {
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "enabled": true
-      },
-      "tag": "socks"
+      "endpoint_independent_nat": true
     },
     {
+      "type": "mixed",
       "listen": "127.0.0.1",
-      "port": 10809,
-      "protocol": "http",
-      "settings": {
-        "userLevel": 8
-      },
-      "tag": "http"
+      "listen_port": 2080
     }
   ],
-  "log": {
-    "loglevel": "none"
-  },
-    "outbounds": [
+  "outbounds": [
     {
+      "type": "http",
+      "tag": "nl_1_Netherlands",
+      "server": "149.50.217.196",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "nl_2_Netherlands",
+      "server": "149.50.215.109",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "nl_3_Netherlands",
+      "server": "185.253.96.243",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "lv_Latvia",
+      "server": "185.135.87.117",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "gr_Greece",
+      "server": "79.127.181.234",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "jp_Japan",
+      "server": "203.27.106.83",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "us_1_United States",
+      "server": "198.144.155.68",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "sg_1_Singapore",
+      "server": "103.107.197.180",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "sg_2_Singapore",
+      "server": "103.109.103.61",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "hk_Hong Kong",
+      "server": "45.250.255.25",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "ro_Romania",
+      "server": "212.103.50.212",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "ca_Canada",
+      "server": "149.40.52.227",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "nl_4_Netherlands",
+      "server": "149.102.251.21",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "nl_5_Netherlands",
+      "server": "149.102.238.165",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "us_2_United States",
+      "server": "154.47.30.182",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "nl_6_Netherlands",
+      "server": "149.50.211.73",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "lv_2_Latvia",
+      "server": "89.238.150.28",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "de_Germany",
+      "server": "37.46.115.188",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "pl_Poland",
+      "server": "194.110.114.99",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "http",
+      "tag": "nl_7_Netherlands",
+      "server": "45.134.140.229",
+      "server_port": 10780,
+      "username": "purevpn0s13627758",
+      "password": "zh610jxa",
+      "headers": {
+        "Host": "scholar.google.com"
+      }
+    },
+    {
+      "type": "selector",
       "tag": "proxy",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "194.233.96.24",
-            "ota": false,
-            "port": 90,
-            "level": 1,
-            "users": [
-              {
-                "user": "yLoEDZiuRqdg8HqQfaEMXhzn",
-                "pass": "xFJrJhcRDNSf7a7SCxz1wH4u",
-                "level": 1
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": true,
-          "serverName": "gitlab.com",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ],
-          "fingerprint": "firefox"
-        },
-        "sockopt": {
-          "dialerProxy": "proxy3"
-        }
-      },
-      "mux": {
-        "enabled": false,
-        "concurrency": -1
-      }
-    },
-    {
-      "protocol": "freedom",
-      "settings": {},
-      "tag": "direct"
-    },
-    {
-      "protocol": "blackhole",
-      "settings": {
-        "response": {
-          "type": "http"
-        }
-      },
-      "tag": "block"
+      "outbounds": [
+        "nl_1_Netherlands",
+        "nl_2_Netherlands",
+        "nl_3_Netherlands",
+        "lv_Latvia",
+        "gr_Greece",
+        "jp_Japan",
+        "us_1_United States",
+        "sg_1_Singapore",
+        "sg_2_Singapore",
+        "hk_Hong Kong",
+        "ro_Romania",
+        "ca_Canada",
+        "nl_4_Netherlands",
+        "nl_5_Netherlands",
+        "us_2_United States",
+        "nl_6_Netherlands",
+        "lv_2_Latvia",
+        "de_Germany",
+        "pl_Poland",
+        "nl_7_Netherlands"
+      ]
     }
   ],
-    "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": [
-      {
-        "domain": [
-          "domain:ir",
-          "geosite:category-ir",
-          "geosite:private"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
-      },
-      {
-        "ip": [
-          "geoip:ir",
-          "geoip:private"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
-      },
-      {
-        "domain": [
-          "geosite:category-ads-all",
-          "geosite:category-ads-ir"
-        ],
-        "outboundTag": "block",
-        "type": "field"
-      }
-    ]
-  }
-},
-{
-"remarks": "pure-🇨🇭",
-  "dns": {
-    "hosts": {
-      "geosite:category-ads-all": "127.0.0.1",
-      "geosite:category-ads-ir": "127.0.0.1",
-      "domain:googleapis.cn": "googleapis.com"
-    },
-    "servers": [
-      "https://8.8.8.8/dns-query"
-    ]
-  },
-  "inbounds": [
-    {
-      "listen": "127.0.0.1",
-      "port": 10808,
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
-      },
-      "sniffing": {
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "enabled": true
-      },
-      "tag": "socks"
-    },
-    {
-      "listen": "127.0.0.1",
-      "port": 10809,
-      "protocol": "http",
-      "settings": {
-        "userLevel": 8
-      },
-      "tag": "http"
-    }
-  ],
-  "log": {
-    "loglevel": "none"
-  },
-    "outbounds": [
-    {
-      "tag": "proxy",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "[::ffff:d461:4603]",
-            "ota": false,
-            "port": 89,
-            "level": 1,
-            "users": [
-              {
-                "user": "yLoEDZiuRqdg8HqQfaEMXhzn",
-                "pass": "xFJrJhcRDNSf7a7SCxz1wH4u",
-                "level": 1
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": true,
-          "serverName": "gitlab.com",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ],
-          "fingerprint": "firefox"
-        },
-        "sockopt": {
-          "dialerProxy": "proxy3"
-        }
-      },
-      "mux": {
-        "enabled": false,
-        "concurrency": -1
-      }
-    },
-    {
-      "protocol": "freedom",
-      "settings": {},
-      "tag": "direct"
-    },
-    {
-      "protocol": "blackhole",
-      "settings": {
-        "response": {
-          "type": "http"
-        }
-      },
-      "tag": "block"
-    }
-  ],
-    "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": [
-      {
-        "domain": [
-          "domain:ir",
-          "geosite:category-ir",
-          "geosite:private"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
-      },
-      {
-        "ip": [
-          "geoip:ir",
-          "geoip:private"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
-      },
-      {
-        "domain": [
-          "geosite:category-ads-all",
-          "geosite:category-ads-ir"
-        ],
-        "outboundTag": "block",
-        "type": "field"
-      }
-    ]
-  }
-},
-{
-"remarks": "pure-🇩🇰",
-  "dns": {
-    "hosts": {
-      "geosite:category-ads-all": "127.0.0.1",
-      "geosite:category-ads-ir": "127.0.0.1",
-      "domain:googleapis.cn": "googleapis.com"
-    },
-    "servers": [
-      "https://8.8.8.8/dns-query"
-    ]
-  },
-  "inbounds": [
-    {
-      "listen": "127.0.0.1",
-      "port": 10808,
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
-      },
-      "sniffing": {
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "enabled": true
-      },
-      "tag": "socks"
-    },
-    {
-      "listen": "127.0.0.1",
-      "port": 10809,
-      "protocol": "http",
-      "settings": {
-        "userLevel": 8
-      },
-      "tag": "http"
-    }
-  ],
-  "log": {
-    "loglevel": "none"
-  },
-    "outbounds": [
-    {
-      "tag": "proxy",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "85.190.238.27",
-            "ota": false,
-            "port": 89,
-            "level": 1,
-            "users": [
-              {
-                "user": "yLoEDZiuRqdg8HqQfaEMXhzn",
-                "pass": "xFJrJhcRDNSf7a7SCxz1wH4u",
-                "level": 1
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": true,
-          "serverName": "gitlab.com",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ],
-          "fingerprint": "firefox"
-        },
-        "sockopt": {
-          "dialerProxy": "proxy3"
-        }
-      },
-      "mux": {
-        "enabled": false,
-        "concurrency": -1
-      }
-    },
-    {
-      "protocol": "freedom",
-      "settings": {},
-      "tag": "direct"
-    },
-    {
-      "protocol": "blackhole",
-      "settings": {
-        "response": {
-          "type": "http"
-        }
-      },
-      "tag": "block"
-    }
-  ],
-    "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": [
-      {
-        "domain": [
-          "domain:ir",
-          "geosite:category-ir",
-          "geosite:private"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
-      },
-      {
-        "ip": [
-          "geoip:ir",
-          "geoip:private"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
-      },
-      {
-        "domain": [
-          "geosite:category-ads-all",
-          "geosite:category-ads-ir"
-        ],
-        "outboundTag": "block",
-        "type": "field"
-      }
-    ]
-  }
-},
-{
-"remarks": "pure-🇮🇹",
-  "dns": {
-    "hosts": {
-      "geosite:category-ads-all": "127.0.0.1",
-      "geosite:category-ads-ir": "127.0.0.1",
-      "domain:googleapis.cn": "googleapis.com"
-    },
-    "servers": [
-      "https://8.8.8.8/dns-query"
-    ]
-  },
-  "inbounds": [
-    {
-      "listen": "127.0.0.1",
-      "port": 10808,
-      "protocol": "socks",
-      "settings": {
-        "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
-      },
-      "sniffing": {
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "enabled": true
-      },
-      "tag": "socks"
-    },
-    {
-      "listen": "127.0.0.1",
-      "port": 10809,
-      "protocol": "http",
-      "settings": {
-        "userLevel": 8
-      },
-      "tag": "http"
-    }
-  ],
-  "log": {
-    "loglevel": "none"
-  },
-    "outbounds": [
-    {
-      "tag": "proxy",
-      "protocol": "http",
-      "settings": {
-        "servers": [
-          {
-            "address": "85.190.232.156",
-            "ota": false,
-            "port": 90,
-            "level": 1,
-            "users": [
-              {
-                "user": "yLoEDZiuRqdg8HqQfaEMXhzn",
-                "pass": "xFJrJhcRDNSf7a7SCxz1wH4u",
-                "level": 1
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": true,
-          "serverName": "gitlab.com",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ],
-          "fingerprint": "firefox"
-        },
-        "sockopt": {
-          "dialerProxy": "proxy3"
-        }
-      },
-      "mux": {
-        "enabled": false,
-        "concurrency": -1
-      }
-    },
-    {
-      "protocol": "freedom",
-      "settings": {},
-      "tag": "direct"
-    },
-    {
-      "protocol": "blackhole",
-      "settings": {
-        "response": {
-          "type": "http"
-        }
-      },
-      "tag": "block"
-    }
-  ],
-    "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": [
-      {
-        "domain": [
-          "domain:ir",
-          "geosite:category-ir",
-          "geosite:private"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
-      },
-      {
-        "ip": [
-          "geoip:ir",
-          "geoip:private"
-        ],
-        "outboundTag": "direct",
-        "type": "field"
-      },
-      {
-        "domain": [
-          "geosite:category-ads-all",
-          "geosite:category-ads-ir"
-        ],
-        "outboundTag": "block",
-        "type": "field"
-      }
-    ]
+  "route": {
+    "final": "proxy",
+    "auto_detect_interface": true
   }
 }
-]
