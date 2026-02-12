@@ -15,23 +15,23 @@
       },
       {
         "type": "udp",
-        "server": "2620:119:35::5437"
+        "server": "1.12.12.12"
       },
       {
         "type": "udp",
-        "server": "2620:119:35::e22"
+        "server": "1.1.1.1"
       },
       {
         "type": "udp",
-        "server": "2620:119:35::4ed7"
+        "server": "8.8.4.4"
       },
       {
         "type": "udp",
-        "server": "2620:119:35::f85"
+        "server": "1.0.0.1"
       },
       {
         "type": "udp",
-        "server": "2620:119:35::68a"
+        "server": "9.9.9.9"
       },
       {
         "type": "local"
